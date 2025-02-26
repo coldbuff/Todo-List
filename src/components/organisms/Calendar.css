@@ -1,0 +1,132 @@
+.calendar-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;  /* todolist와 비슷한 크기로 조정 */
+  margin: 0 auto;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.calendar-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.calendar-header button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.calendar-header button:hover {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.weekdays > div {
+  padding: 10px;
+  font-weight: bold;
+  color: #666;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.weekday {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+.day {
+  aspect-ratio: 1;
+  padding: 10px;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+.day.has-todo::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+}
+
+.day.has-priority::before {
+  content: '⭐';
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  font-size: 0.7rem;
+}
+
+.day.has-finished::after {
+  background-color: #9e9e9e;
+}
+
+.day:hover {
+  background-color: #f8f9fa;
+}
+
+.day.selected {
+  background-color: #e3f2fd;
+  border-color: #90caf9;
+}
+
+.day.empty {
+  background-color: #f8f9fa;
+  border: none;
+  cursor: default;
+}
+
+.day .todo-count {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.day .todo-count.active {
+  color: #4CAF50;
+}
+
+.day .todo-count.completed {
+  color: #9e9e9e;
+}

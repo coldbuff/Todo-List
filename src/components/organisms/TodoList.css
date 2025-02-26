@@ -1,0 +1,73 @@
+.todo-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.todo-table th,
+.todo-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.todo-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  color: #333;
+}
+
+.todo-table td.todo-priority,
+.todo-table td.todo-complete,
+.todo-table td.todo-delete {
+  text-align: center;
+}
+
+.todo-table button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.priority-btn {
+  background: none;
+  font-size: 1.1em;
+  padding: 4px 8px;
+}
+
+.priority-btn.active {
+  color: #ffd700;
+}
+
+.complete-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.complete-btn:hover {
+  background-color: #45a049;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #da190b;
+}
+
+.completed {
+  background-color: #f8f9fa;
+  color: #666;
+}
+
+.completed .todo-text {
+  text-decoration: line-through;
+}
