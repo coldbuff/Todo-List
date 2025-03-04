@@ -93,9 +93,9 @@ export const Chart: React.FC<ChartProps> = ({ todos }) => {
   };
 
   return (
-    <div className="chart-wrapper">
+    <div className="chart-wrapper todo-chart">
       <Bar data={data} options={options} />
-      <div className="chart-summary">
+      <div className="chart-summary todo-summary">
         <div className="summary-item">
           <span className="label">전체:</span>
           <span className="value">{todos.length}</span>
